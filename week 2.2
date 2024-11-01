@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Time{
+    public static void main(String args[]){
+        Scanner input=new Scanner(System.in);
+        String s=input.nextLine();
+        char n=s.charAt(0);
+        char v=s.charAt(2);
+        switch(n){
+            case '2','3','4','5'->{
+                if(v=='t')
+                    System.out.println("7:00");
+                else
+                    System.out.println("5:00");
+            }
+            case '1','6'->{
+                if(v=='t')
+                    System.out.println("9:00");
+                else
+                    System.out.println("6:00");
+     
+            }
+        }
+    }
+}
