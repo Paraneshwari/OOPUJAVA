@@ -1,0 +1,48 @@
+public class Mobile{
+    private String manufacturer;
+    private String operating_system;
+    public String color;
+    private int cost;
+    Mobile(String m,String os,String c,int c1){
+        manufacturer=m;
+        operating_system=os;
+        color=c;
+        cost=c1;
+    }
+    void setManufacturer(String manufacturer){
+        this.manufacturer=manufacturer;
+    }
+    void setOperatingSystem(String operating_system){
+        this.operating_system=operating_system;
+    }
+    void setColor(String color){
+        this.color=color;
+    }
+    void setCost(int cost){
+        this.cost=cost;
+    }
+    String getManufacturer(){
+        return manufacturer;
+    }
+    String getOperatingSystem(){
+        return operating_system;
+    }
+    String getColor(){
+        return color;
+    }
+    int getCost(){
+        return cost;
+    }
+    public  String toString(){
+        return "manufacturer = "+manufacturer+"\n"+
+        "operating_system = "+operating_system+"\n"+
+        "color = "+color+"\n"+
+        "cost = "+cost;
+    }
+    
+
+    public static void main(String args[]){
+        Mobile m1=new Mobile("Redmi","Andriod","Blue",34000);
+        System.out.println(m1);
+    }
+}
