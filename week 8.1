@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+abstract class Shape {
+    public abstract double calculateArea();
+}
+
+class Circle extends Shape {
+    private double radius;
+
+    public Circle(double r) {
+        this.radius = r;
+    }
+
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+}
+
+class Rectangle extends Shape {
+    private double length;
+    private double breadth;
+
+    public Rectangle(double l, double b) {
+        this.length = l;
+        this.breadth = b;
+    }
+    public double calculateArea() {
+        return length * breadth;
+    }
+}
+
+class Triangle extends Shape {
+    private double base;
+    private double height;
+
+    public Triangle(double b, double h) {
+        this.base = b;
+        this.height = h;
+    }
+    public double calculateArea() {
+        return 0.5 * base * height;
+    }
+}
+
+public class Main {
+    public static void main(String args[]) {
+        Scanner input = new Scanner(System.in);
+
+       
+        double rad = input.nextDouble();
+        Circle circle = new Circle(rad);
+
+        double len = input.nextDouble();
+        double breadth = input.nextDouble();
+        Rectangle rectangle = new Rectangle(len, breadth);
+
+        double base = input.nextDouble();
+        double height = input.nextDouble();
+        Triangle triangle = new Triangle(base, height);
+
+        double ca = circle.calculateArea();
+        double ra = rectangle.calculateArea();
+        double ta = triangle.calculateArea();
+
+        System.out.printf("Area of a circle: %.2f%n",ca);
+        System.out.printf("Area of a Rectangle: %.2f%n",ra);
+        System.out.printf("Area of a Triangle: %.2f%n ",ta);
+
+    }
+}
