@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class Test{
+    public static void main(String args[]){
+    Scanner input=new Scanner(System.in);
+    int n=input.nextInt();
+    input.nextLine();
+    String s=new String();
+    s=input.nextLine();
+    //System.out.println(s);
+    String a[]=s.split(" ");
+    char f,l;
+    String c="";
+    int y=0;
+    for(int i=0;i<n;i++){
+        //System.out.println(a[i]);
+        a[i]=a[i].toLowerCase();
+        int z=a[i].length();
+        f=a[i].charAt(0);
+        l=a[i].charAt(z-1);
+        if(isvowel(f) && isvowel(l)){
+            y=1;
+            c=c+a[i];
+            //System.out.println(c);
+        }
+    }
+    if(y==0){
+    System.out.println("no matches found");
+    }
+    else{
+        System.out.println(c);
+    }
+    }
+    static boolean isvowel(char a){
+        return "aeiou".indexOf(a)!=-1;
+    }
+}
