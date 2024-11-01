@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Arr{
+    public static void main(String args[]){
+        Scanner input=new Scanner(System.in);
+        int n=input.nextInt();
+        int[]a= new int[n];
+        for(int i=0;i<n;i++){
+            a[i]=input.nextInt();
+        }
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++){
+            int m=a[i];
+            int p=(int)Math.pow(10,i);
+            int d=(m/p)%10;
+            arr[i]=d;
+        }
+        for(int i=0;i<n;i++)
+            arr[i]=(int)Math.pow(arr[i],2);
+        int sum=0;
+        for(int i=0;i<n;i++)
+            sum+=arr[i];
+        System.out.println(sum);
+    }
+}
