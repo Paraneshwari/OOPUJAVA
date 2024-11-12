@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class BinaryDecoder {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        StringBuilder result = new StringBuilder();
+        String[] parts = input.split("1");
+        
+        for (String part : parts) {
+            int length = part.length();
+            if (length > 0 && length <= 26) {
+                char letter = (char) ('A' + (26 - length));
+                result.append(letter);
+            }
+        }
+        
+        System.out.println(result.toString());
+        sc.close();
+    }
+}
